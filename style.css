@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+    overflow: hidden;
+}
+
+
+.bg{
+    background-image: url('images/BG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+.img1{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-image: url('images/image-2.png');
+    background-size: cover;
+}
+.img2{
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    background-image: url('images/image-1.png');
+    background-size: cover;
+    right: 0;
+    bottom: 0;
+}
+
+.calculator{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.02);
+    z-index: ;
+    width: 360px;
+    
+}
+@media (max-width : 480px){
+   .calculator{
+       margin: 80px 10px;
+   }
+}
+
+#equation{
+    height: 80px;
+    width: 360px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+    text-align: right;
+    padding: 0 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    backdrop-filter: blur(4.9px);
+}
+#equation:focus{
+    outline: none;
+}
+.btn-grp{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    color: white;
+    font-size: 22px;
+}
+.btn{
+    width: 90px;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4.9px);
+    cursor: pointer;
+}
+.btn:nth-child(4n){
+    border-right: none;
+}
+
+.btn:hover{
+    background-color: aqua;
+    color: black;
+}
+#plus{
+    grid-row: span 2;
+    height: 180px;
+}
